@@ -1,0 +1,479 @@
+@charset "utf-8";
+/* CSS Document */
+/*************************{Main Page}********************/
+
+body{ background:#282828;}
+
+#wrapper{ width:1200px; padding:0 50px; min-height:400px; margin:0 auto; background:#fff}
+
+
+#header { height:235px; width:1150px; background:url(../img/header_bg.jpg) top right no-repeat;}
+
+
+#logo{ padding-top:67px; margin-bottom: 20px}
+
+#logo img{ width:285px; height:118px; }
+
+
+
+#menu{ width:1100px; height:60px; background:url(../img/menu_bg.png) no-repeat;}
+
+#menu ul{ float:left;}
+
+#menu ul li{ float:left; min-width:90px; padding:0 15px; line-height:40px;}
+
+#menu ul li a{ text-decoration:none; color:#fff; font-size:14px; font-family:Verdana, Geneva, sans-serif;}
+
+
+#menu h1{ line-height:40px; color:#fff;font-size:14px; font-family:Verdana, Geneva, sans-serif; margin-left:60px; float: left;}
+
+
+#slinks{ float:right; margin-right:15px;}
+
+#slinks h1{ margin-right:20px;}
+
+#slinks img{ margin-left:5px;}
+
+
+#contents{ width:1100px; clear:both; min-height:250px; }
+
+
+#sidebsr{ width:270px; float:left; min-height:250px;margin-right: 20px }
+
+.side{ width:270px; background:url(../img/side_bg.png) repeat-y;min-height:300px; padding-top:20px; margin-right: 25px}
+
+.side_head{ width:270px; height:55px; background:url(../img/head_side.png) no-repeat; text-align:center;}
+
+
+.side h1{ color:#FFF; font-family:Verdana, Geneva, sans-serif; font-size:16px; font-weight:bold; line-height:40px;}
+
+
+.side_body{}
+.side_body ul{ padding:5px; padding-left:45px;}
+
+.side_body ul li{ list-style-image:url(../img/arrow.png);}
+
+.side_body ul li a{ text-decoration:none; color:#000; font-family:Verdana, Geneva, sans-serif; font-size:15px; line-height:20px;}
+
+
+.side form{ text-align:center;}
+
+.side input[type="text"]{ width:185px; height:25px; margin-bottom:10px; padding:5px; border-radius:5px;}
+
+.side input[type="submit"]{ width:124px; height:30px; background-color:#333; color:#f5f4f4; border:0; border-radius:5px;}
+
+
+#conts{ width:810px; min-height:300px; float:right;}
+
+#slider{ width:810px; height:330px; background:url(../images/slider_bg.jpg) no-repeat;}
+
+
+#latestprojects{ margin-top:20px;}
+
+#latestprojects h1{ font-family:Verdana, Geneva, sans-serif; color:
+#cb0030; font-size:17px; margin-bottom:20px;}
+
+
+.project{ width:395px; height:100px; float:left; margin-bottom:50px; line-height:20px;}
+
+.project:nth-child(even){ margin-right:20px;}
+
+
+.project img{ float:left; margin-right:10px;}
+.project h2{ font-family:Verdana, Geneva, sans-serif; color:#282828; font-size:14px;}
+
+.project p{font-family:Verdana, Geneva, sans-serif; color:#282828; font-size:12px; text-align:justify;}
+
+.project a{font-family:Verdana, Geneva, sans-serif; color:#cb0030; font-size:12px; float:right;}
+
+
+#footer{ margin-left:-50px; width:1200px; height:200px; background:url(../img/footer.png) no-repeat top; margin-top:100px; clear:both; padding-top:100px; padding-left:50px;}
+#news{ width:1100px; height:60px; background:url(../img/menu_bg2.png) no-repeat;  }
+
+#news ul{ float:left;}
+#news ul li{ float:left; min-width:90px; padding:0 15px; line-height:40px;font-weight: bold}
+
+#news ul li a{ text-decoration:none; color:#000; font-size:14px; font-family:Verdana, Geneva, sans-serif;}
+
+
+#img_wel {width :800px ; height : 330px ;position: relative; right: 150px; margin-bottom: 10px ;border-radius:  10px}
+
+.slideshow-container {  max-width: 500px;  position: relative; margin: auto; }
+
+
+.mySlides {
+    display: none;
+    
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 2s;
+  animation-name: fade;
+  animation-duration:2s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* login manger*/
+#log_h1{height: 20px color:#fff; font-size:40px; font-family:Verdana, Geneva, sans-serif;color:darkslateblue }
+.login{margin: auto; font-weight: bold; font-family: inherit; font-size: 20px ;color: black ; border: 2px solid gray; width: 60% ;padding: 20px; height:350px;   border-radius: 15px; background:#eee; }
+#lg_btn{margin: inherit ; text-align: center; background-color:cornflowerblue; border: 2px solid #eee; color: black ;width:150px; height:60px; margin:20px; padding: 5px; font-size: 30px;border-radius: 15px;float: left}
+.login input{height: 50px ;width:300px; border-radius:5px}
+#chk_lg{height: 10px;width: 20px}
+
+#logout_man{float: right ;position:relative;left:350px ;font-size: 20px}
+/*login mangement*/
+
+
+/* Manger Design*/
+
+#main_man{background-color:#eee; border: 2px solid black; height: 600px }
+#insr_btn{text-align: center; background-color:darkcyan; border: 2px solid #eee; color: black ;width:600px; height:70px; margin:10px; padding: 5px; font-size: 30px;  border-radius: 15px; position:relative;   }
+#del_btn{text-align: center; background-color:darkcyan; border: 2px solid #eee; color: black ;width:600px; height:70px; margin:5px; padding: 5px; font-size: 30px;  border-radius: 15px;position:relative; }
+#ser_btn{text-align: center; background-color:darkcyan; border: 2px solid #eee; color: black ;width:600px; height:70px; margin:30px; padding: 5px; font-size: 30px;  border-radius: 15px;position:relative;  }
+#edi_btn{text-align: center; background-color:darkcyan; border: 2px solid #eee; color: black ;width:600px; height:70px; margin:30px; padding: 5px; font-size: 30px;  border-radius: 15px;position:relative; }
+
+/*Manger Delete Teacher*/
+#man_del{ 
+    background:#eee;
+    padding:50px ;
+    height:700px;
+    font-size:15px;
+    font-style:bold;
+     margin-bottom: 20px;
+    color:crimson
+    
+     }
+#man_del input{width: 400px ;font-size:30px ; float: left;margin-bottom:30px; margin-top:20px;border-radius: 10px;height:50px}
+#man_del p{font-size:40px ; float: left ; }
+ #man_del button{
+    width: 200px;
+    margin: 50px;
+    height: 40px;
+    padding: 5px;
+    background-color:crimson;
+    border-radius: 10px;
+    position: relative;
+    right: 200px;
+    top:150px;
+     float: left ;
+     font-size: 20px
+     
+    }
+#del_h1{height: 20px; font-size:40px; font-family:Verdana, Geneva, sans-serif;color:crimson ;  }
+
+.form-control{width:60% ; padding-top:100px ;  margin-right:300px}
+/* inser teacher*/
+#man_ins{
+    background:#eee;
+    padding:50px ;
+    height:1300px;
+    font-size:10px;
+    font-style:bold;
+    margin-bottom: 20px;
+    color: darkred;
+}
+#man_h1{height: 20px; font-size:40px; font-family:Verdana, Geneva, sans-serif;color: darkred  }
+
+#ins_btn{  margin: inherit ;  text-align: center; background-color:dodgerblue ; border: 2px solid #eee; color: black ;width:200px; height:60px; margin:10px; padding: 5px; font-size: 20px ; border-radius: 10px}
+#ins_man{width: 250px ;font-size:20px ; float: left}
+#ins_man p{font-size:25px ; float: left;}
+#ins_man input{width: 400px ;margin-bottom: 10px ; border-radius: 10px}
+#ins_man hr{width: 1000px ;background-color: #000}
+#srup_btn {width:60px ;border-radius: 25px}
+#srup_btn img{width: 40px}
+/* Update Teacher*/
+#man_upd
+{
+    background:#eee;
+    padding:50px ;
+    height:1100px;
+    font-size:15px;
+    font-style:bold;
+    margin-bottom: 20px;
+    color:darkslateblue;
+}
+#upd_h1{
+    height: 20px color:#fff; font-size:40px; font-family:Verdana, Geneva, sans-serif;color:darkslateblue
+}
+
+#textarea
+{
+    width:450px;
+    height:150px;
+    border-style: solid;
+       
+}
+#upd_btn{
+    width: 150px;
+    margin: 20px;
+    height: 40px;
+    padding: 5px;
+    margin-right:100px;
+    float: left;
+    border-radius: 10px;
+    background-color:dodgerblue
+    
+}
+
+/*search teacher*/
+
+
+#btn_ser{
+     width: 150px;
+    margin: 50px;
+    height: 40px;
+    padding: 5px;
+    margin-right:100px;
+    float: left;
+    border-radius: 10px;
+    background-color:dodgerblue
+    
+}
+#ser_frm{
+    width:1150px;
+    height:800px;
+     background:#eee;
+    padding:50px ;
+    font-size:15px;
+    font-style:bold;
+     margin: 10px;
+    position:relative;
+     right: 35px;
+    color:cornflowerblue;
+}
+#ser_h1{
+    height: 20px;font-size:40px; font-family:Verdana, Geneva, sans-serif;color:dodgerblue;margin-bottom: 30px
+}
+
+#ser_man{width: 250px ;font-size:30px ; float: left}
+#ser_frm input{width: 300px;height: 50px; border-radius: 10px; margin-bottom: 100px}
+#ser_frm p{font-size: 40px  }
+#ser_frm table{ width: 1000px;border: 3px solid #009999 ;  ;font-size: 20px ; margin-bottom: 100px ;padding: 10px;position:relative;
+     right: 20px; background-color: #80bdff }
+#ser_frm table td{height: 150px;border: 2px solid #009999 ;color:#212529 ;}
+#ser_frm table th{height: 50px;border: 2px solid #009999;color: #dc3545;font-weight: bold}
+/* Mangement Student*/
+#mang_man{background-color:#eee; border: 2px solid black; height: 500px ;margin:50px; font-size: 60px ;width:1100px ;position:relative;right:50px}
+#insr_btn1{text-align: center;border: 2px solid #eee; color: black ;width:350px; height:60px; margin:40px; padding: 5px; font-size: 30px;  border-radius: 15px; }
+#del_btn1{text-align: center; border: 2px solid #eee; color: black ;width:350px; height:60px; margin:40px; padding: 5px; font-size: 30px;  border-radius: 15px; }
+#ser_btn1{text-align: center;  border: 2px solid #eee; color: black ;width:350px; height:60px; margin:40px; padding: 5px; font-size: 30px;  border-radius: 15px;  }
+#edi_btn1{text-align: center;  border: 2px solid #eee; color: black ;width:350px; height:60px; margin:40px; padding: 5px; font-size: 30px;  border-radius: 15px;  }
+
+/*Insert Course */
+#insr_cours{
+    background:#eee;
+    padding:50px ;
+    height:1200px;
+    font-size:30px;
+    font-style:bold;
+ 
+    color:darkslateblue;
+    border: 2px solid gray;
+    border-radius: 10px
+}
+#insr_cours input{border-radius: 5px ;border:1px solid;font-size:20px; width:300px; height:40px ; }
+#insr_cours select{border-radius: 5px ;border:1px solid; font-size:20px;width:300px;height:40px}
+#insr_cours textarea{border-radius: 5px ;border:1px solid;font-size:20px;width:500px;height:200px}
+#course_btn{width: 100px;height:50px ; border:1px solid; border-radius:5px;background-color: dodgerblue;
+margin:20px
+}
+/*Student Search*/
+#st_h1{height: 20px color:#fff; font-size:40px; font-family:Verdana, Geneva, sans-serif;color:darkcyan  }
+#st_ser{
+    background:#eee;
+    padding:50px ;
+    height:800px;
+    font-size:20px;
+    font-style:bold;
+    margin-bottom: 20px;
+    color:darkslateblue;
+}
+
+#st_ser p{font-size:40px;}
+#st_ser input{width: 350px ;font-size:30px ; float: left ; font-size:20px; border-radius: 5px; border:1px solid ;height:40px;margin-bottom: 100px }
+
+#st_btn 
+{
+    border-radius: 10px;
+    margin :20px;
+    width:150px;
+    height:50px;
+    margin-right: 50px;
+     background-color:darkcyan ;
+}
+#st_ser table{ width: 1000px;border: 3px solid #009999 ;  ;font-size: 20px ; margin-bottom: 100px ;padding: 10px;position:relative;
+     right: 20px; background-color: #c8cbcf}
+#st_ser table td{height: 150px;border: 2px solid #009999 ;color:indigo ;}
+#st_ser table th{height: 50px;border: 2px solid #009999;color: #dc3545;font-weight: bold}
+
+/* Inser Student */
+#st_ins{
+    background:#eee;
+    padding:50px ;
+    height:1400px;
+    font-size:10px;
+    font-style:bold;
+    margin-bottom: 20px;
+    color:darkcyan;
+}
+#st_ins img{border: 1px solid; border-radius: 10px}
+#student_btn{  margin: inherit ;  text-align: center; background-color:cornflowerblue; border: 2px solid #eee; color: black ;width:150px; height:60px; margin:20px; padding: 5px; font-size: 20px ; border-radius: 10px}
+#student_ins{font-size:20px ; float: left}
+#student_ins select{border-radius:5 px;height:50 px}
+#student_ins p{font-size:25px ;}
+#student_ins input{width: 400px ;margin-bottom: 10px ; border-radius: 5px;height: 40px}
+
+ /*Edit Student*/
+
+#ed_h1{height: 20px color:#fff; font-size:40px; font-family:Verdana, Geneva, sans-serif;color:darkslategrey}
+
+#edit_st{
+    background:#eee;
+    padding:50px ;
+    height:1100px;
+    font-size:20px;
+    font-style:bold;
+    margin-bottom: 20px;
+    color:darkslategrey;
+}
+#edit_btn{ margin: inherit ;  text-align: center; background-color:darkslategrey; border: 2px solid #eee; color:aliceblue;width:200px; height:50px; margin:20px; padding: 5px; font-size: 20px ; border-radius: 10px}
+#edit_st p{font-size:25px ;}
+#edit_st select{border-radius:5px;height:50px}
+#edit_st input{width: 400px ;margin-bottom: 10px ; border-radius: 10px;height: 40px}
+
+/*Delete Student*/
+
+#del_st_h1{height: 20px; font-size:40px; font-family:Verdana, Geneva, sans-serif;color:darkorange}
+#st_del{
+    background:#eee;
+    padding:50px ;
+    height:700px;
+    font-size:20px;
+    font-style:bold;
+    margin-bottom: 20px;
+    color:darkorange
+}
+
+#st_del p{font-size: 35px}
+#st_del input{width: 450px ;font-size:30px ; float: left;margin-bottom:30px; margin-top:20px;border-radius: 10px;height:50px}
+#btn_del{
+    width: 200px;
+    margin: 50px;
+    height: 50px;
+    padding: 5px;
+    background-color:#c69500;
+    border-radius: 10px;
+    position: relative;
+   right:10px;
+    top:50px;
+     float: left ;
+     font-size: 30px
+    
+}
+#st_del input{border-radius: 10px;height:50px;width:300px}
+
+/* Couurse Student */
+#crs_st_h1{height: 20px; font-size:40px; font-family:Verdana, Geneva, sans-serif;color:cornflowerblue}
+#crs_st{
+    background:#eee;
+    padding:50px ;
+    height:800px;
+    font-size:20px;
+    font-style:bold;
+    margin-bottom: 20px;
+    color:cornflowerblue
+}
+#crs_btn{
+    width: 200px;
+    margin: 30px;
+    height: 40px;
+    padding: 5px;
+    background-color:cornflowerblue;
+    
+    border-radius: 10px;
+    position: relative;
+    top: 320px;
+    right:300px
+}
+#crs_st p{font-size:50px}
+#crs_st textarea{
+    width:600px;
+    height:300px;
+    margin:15px;
+    border-style: solid;
+    position: relative;
+    float:left;
+    border-radius: 10px;
+}
+#crs_st input{border-radius: 10px;height:50px;width:300px}
+
+/*Course Teacher*/
+
+#crs_th_h1{height: 20px; font-size:40px; font-family:Verdana, Geneva, sans-serif;color:cornflowerblue}
+#crs_st{
+    background:#eee;
+    padding:50px ;
+    height:800px;
+    font-size:20px;
+    font-style:bold;
+    margin-bottom: 20px;
+    color:cornflowerblue
+}
+#crs_btn_th{
+    width: 200px;
+    margin: 30px;
+    height: 40px;
+    padding: 5px;
+    background-color:cornflowerblue;
+    
+    border-radius: 10px;
+    position: relative;
+    top: 320px;
+    right:300px
+}
+#crs_th p{font-size:50px}
+#crs_th textarea{
+    width:600px;
+    height:300px;
+    margin:15px;
+    border-style: solid;
+    position: relative;
+    float:left;
+    border-radius: 10px;
+}
+#crs_th input{border-radius: 10px;height:50px;width:300px}
+/* request */
+#st_req{
+    background:#eee;
+    padding:50px ;
+    width:1150px;
+    height:800px;
+    font-size:20px;
+    font-style:bold;
+    margin-bottom: 20px;
+    color:darkslateblue;
+    position:relative;
+    right:20px
+}
+
+#st_req table{ width: 600px;border: 3px solid #009999  ;font-size: 20px ; margin-bottom: 100px ;padding: 10px;position:relative;
+     right: 30px; background-color: #c8cbcf}
+#st_req table td{ width:200px;height: 50;border: 2px solid #009999 ;color:indigo ;}
+#st_req table th{ width:200px;height: 30px;border: 2px solid #009999;color: #dc3545;font-weight: bold}
+
+#req_btn { width:40px;height: 40px ; margin: 20px ;border-radius: 20px ;background-color:#c8cbcf ;border: 1px solid #c8cbcf ;position: ralative; left:30px}
+#req_btn img{width:60;height: 50px ; }
+/* Student */
+#sec_stu {background-color:#eee; border: 2px solid black; height: 400px}
+#sec_btn{text-align: center; background-color:#71dd8a; border: 2px solid #eee; color: black ;width:400px; height:70px; margin:10px; padding: 5px; font-size: 30px;  border-radius: 15px; position:relative;   }
+#secl_btn{text-align: center; background-color:#71dd8a; border: 2px solid #eee; color: black ;width:400px; height:70px; margin:5px; padding: 5px; font-size: 30px;  border-radius: 15px;position:relative; }
