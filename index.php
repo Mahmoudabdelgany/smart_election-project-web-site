@@ -1,212 +1,73 @@
-<!Doctype html>
-<html>
- <head>
-    <title> Smart Election  </title> 
-    <meta http-equiv="This is a Wepsite About Smart Election Online" content="text/html; charset=utf-8" />
-    
-    <link href="res/css/reset-min.css" rel="stylesheet" type="text/css" />
-    <link href="res/css/fonts-min.css" rel="stylesheet" type="text/css" />
-    <link href="res/css/bootstrap.css" rel="stylesheet" type="text/css"/>
-    <link href="res/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-    <link href="res/css/style.css" rel="stylesheet" type="text/css" />
-     
-     <script src="res/js/bootstrap.js"></script>
-     <script src="res/js/bootstrap-min.js"></script>
-     <script src="res/js/script.js"></script>
+<?php    
 
-     
- </head>
- <body>
-     <div id="wrapper">
     
-    <div id="header">
+    echo "<h1>PHP QR Code</h1><hr/>";
+    
+    //set it to writable location, a place for temp generated PNG files
+    $PNG_TEMP_DIR = dirname(__FILE__).DIRECTORY_SEPARATOR.'temp'.DIRECTORY_SEPARATOR;
+    
+    //html PNG location prefix
+    $PNG_WEB_DIR = 'temp/';
+
+    include "qrlib.php";    
+    
+    //ofcourse we need rights to create temp dir
+    if (!file_exists($PNG_TEMP_DIR))
+        mkdir($PNG_TEMP_DIR);
+    
+    
+    $filename = $PNG_TEMP_DIR.'test.png';
+    
+    //processing form input
+    //remember to sanitize user input in real-life solution !!!
+    $errorCorrectionLevel = 'L';
+    if (isset($_REQUEST['level']) && in_array($_REQUEST['level'], array('L','M','Q','H')))
+        $errorCorrectionLevel = $_REQUEST['level'];    
+
+    $matrixPointSize = 4;
+    if (isset($_REQUEST['size']))
+        $matrixPointSize = min(max((int)$_REQUEST['size'], 1), 10);
+
+
+    if (isset($_REQUEST['data'])) { 
+    
+        //it's very important!
+        if (trim($_REQUEST['data']) == '')
+            die('data cannot be empty! <a href="?">back</a>');
+            
+        // user data
+        $filename = $PNG_TEMP_DIR.'test'.md5($_REQUEST['data'].'|'.$errorCorrectionLevel.'|'.$matrixPointSize).'.png';
+        QRcode::png($_REQUEST['data'], $filename, $errorCorrectionLevel, $matrixPointSize, 2);    
         
-        <div id="logo"><img src="res/img/log.png" width="285" height="118" /></div>
-        
-        <div id="menu">
-                                            
-            <ul>
-                 <li><a href="index.php" >Home</a></li>
-		 <li><a href="phpqrcode/index.php">generate QR</a></li>
-                <li><a href="LoginVoters.php">Voters</a></li>
-                <li><a href="models/Check_Candidtes.php">candidates</a></li>
-                <li><a href="models/Show_Result.php">Results</a></li>
-                <li><a href="LoginAdmin.php">Admin</a></li>
-                <li><a href="https://www.youm7.com/story/2018/1/9/%D9%85%D9%86-%D9%84%D9%87-%D8%AD%D9%82-%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%AE%D8%A7%D8%A8-%D9%88%D8%A7%D9%84%D9%85%D8%B9%D9%81%D9%89-%D9%85%D9%86%D9%87-%D9%81%D9%89-%D9%82%D8%A7%D9%86%D9%88%D9%86-%D9%85%D8%A8%D8%A7%D8%B4%D8%B1%D8%A9-%D8%A7%D9%84%D8%AD%D9%82%D9%88%D9%82/3591223">About Election</a></li>
-               
-            </ul>
-            
-            
-            
-          <div id="slinks">
-            <h1>Follow us:</h1>
-            <a href="https://www.facebook.com/" ><img src="res/img/fb.png" width="31" height="31" /> </a>
-            <a href="https://www.twitter.com/"  ><img src="res/img/tw.png" width="31" height="31" /></a>
-            <a href="https://www.youtube.com/"  ><img src="res/img/yt.png" width="31" height="31" /></a>
-            <a href="https://www.skype.com/" ><img src="res/img/sk.png" width="35" height="35" /></a>
-            </div>
-        </div>
-    </div>
-       
-    <div id="contents">
-        <div id="sidebsr">
-            <div class="side">
-                <div class="side_head"><h1>Announcement items here! </h1></div>
-                <div class="side_body">
-                    <ul>
-                        <li><a href="">your menu items.</a></li>
-                        <li><a href="">your menu items.</a></li>
-                        <li><a href="">your menu items.</a></li>
-                        <li><a href="">your menu items.</a></li>
-                        <li><a href="">your menu items.</a></li>
-                        <li><a href="">your menu items.</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="side">
-                <div class="side_head"><h1>Announcement items here ! </h1></div>
-                <div class="side_body">
-                    <ul>
-                        <li><a href="">your menu items.</a></li>
-                        <li><a href="">your menu items.</a></li>
-                        <li><a href="">your menu items.</a></li>
-                        <li><a href="">your menu items.</a></li>
-                        <li><a href="">your menu items.</a></li>
-                        <li><a href="">your menu items.</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-        </div>
-         <div id="conts">
-            <div id="slider">
-                <!-- Slide Show -->
-                  <div class="slideshow-container">
-
-                        <div class="mySlides fade">
-
-                        <img src="res/img/9.jpeg" id="img_wel" />
-
-                        </div>
-
-                        <div class="mySlides fade">
-                       <img src="res/img/10.jpeg"  id="img_wel" />
-                        </div>
-
-                        <div class="mySlides fade">
-                         <img src="res/img/11.jpeg"  id="img_wel" />
-
-                        </div>
-                        <div class="mySlides fade">
-                         <img src="res/img/12.jpeg"  id="img_wel" />
-
-                      </div></div>
-               
-                </div>
-             <!-- Script for Slide Show -->
-               <script>
-                var slideIndex = 0;
-                    showSlides();
-
-                    function showSlides() {
-                        var i;
-                        var slides = document.getElementsByClassName("mySlides");
-                        for (i = 0; i < slides.length; i++) {
-                            slides[i].style.display = "none"; 
-                        }
-                        slideIndex++;
-                        if (slideIndex > slides.length) {slideIndex = 1} 
-                        slides[slideIndex-1].style.display = "block"; 
-                        setTimeout(showSlides, 2000); // Change image every 2 seconds
-                    }
-             
-             </script>
-            <div id="latestprojects">
-              <h1>Candidates :</h1>
-                <div class="project">
-                    <img src="res/img/1.jpeg" width="140" height="100" />
-                    <h2>Name</h2>
-                    <p>
-name ,code of election ,circle ,number of candidates..........                    
-                    </p>
-                    <a href="">Read more »</a>
-                </div>
-                <div class="project">
-                    <img src="res/img/1.jpeg" width="140" height="100" />
-                    <h2>Name</h2>
-                    <p>
-name ,code of election ,circle ,number of candidates..........                    
-                    </p>
-                    <a href="">Read more »</a>
-                </div>
-                <div class="project">
-                    <img src="res/img/1.jpeg" width="140" height="100" />
-                    <h2>Name</h2>
-                    <p>
-name ,code of election ,circle ,number of candidates..........                    
-                    </p>
-                    <a href="">Read more »</a>
-                </div>
-                <div class="project">
-                    <img src="res/img/1.jpeg" width="140" height="100" />
-                    <h2>Name</h2>
-                    <p>
-name ,code of election ,circle ,number of candidates..........                    
-                    </p>
-                    <a href="">Read more »</a>
-                </div>
-                <div class="project">
-                    <img src="res/img/1.jpeg" width="140" height="100" />
-                    <h2>Name</h2>
-                    <p>
-name ,code of election ,circle ,number of candidates..........                    
-                    </p>
-                    <a href="">Read more »</a>
-                </div>
-                <div class="project">
-                    <img src="res/img/1.jpeg" width="140" height="100" />
-                    <h2>Name</h2>
-                    <p>
-name ,code of election ,circle ,number of candidates..........                    
-                    </p>
-                    <a href="">Read more »</a>
-                </div>
-                <div class="project">
-                    <img src="res/img/1.jpeg" width="140" height="100" />
-                    <h2>Name</h2>
-                    <p>
-name ,code of election ,circle ,number of candidates..........                    
-                    </p>
-                    <a href="">Read more »</a>
-                </div>
-                <div class="project">
-                    <img src="res/img/1.jpeg" width="140" height="100" />
-                    <h2>Name</h2>
-                    <p>
-name ,code of election ,circle ,number of candidates..........                    
-                    </p>
-                    <a href="">Read more »</a>
-                </div>
-            </div>
-        </div>
-    </div>
-        <div id="footer">
-            <div id ="news" >
-                <ul>
-                 <marquee>
-                    <li><a href="">This is paragraph news</a></li>
-                    <li><a href="">This is paragraph news</a></li>
-                    <li><a href="">This is paragraph news</a></li>
-                    <li><a href="">This is paragraph news</a></li>
-                    <li><a href="">This is paragraph news</a></li>
-                    </marquee>
-                </ul>
-                
-            </div>
-            
-        </div>
-    </div>
-</div>
+    } else {    
     
- </body>  
-</html>
+        //default data
+        echo 'You can provide data in GET parameter: <a href="?data=like_that">like that</a><hr/>';    
+        QRcode::png('PHP QR Code :)', $filename, $errorCorrectionLevel, $matrixPointSize, 2);    
+        
+    }    
+        
+    //display generated file
+    echo '<img src="'.$PNG_WEB_DIR.basename($filename).'" /><hr/>';  
+    
+    //config form
+    echo '<form action="index.php" method="post">
+        Data:&nbsp;<input name="data" value="'.(isset($_REQUEST['data'])?htmlspecialchars($_REQUEST['data']):'PHP QR Code :)').'" />&nbsp;
+        ECC:&nbsp;<select name="level">
+            <option value="L"'.(($errorCorrectionLevel=='L')?' selected':'').'>L - smallest</option>
+            <option value="M"'.(($errorCorrectionLevel=='M')?' selected':'').'>M</option>
+            <option value="Q"'.(($errorCorrectionLevel=='Q')?' selected':'').'>Q</option>
+            <option value="H"'.(($errorCorrectionLevel=='H')?' selected':'').'>H - best</option>
+        </select>&nbsp;
+        Size:&nbsp;<select name="size">';
+        
+    for($i=1;$i<=10;$i++)
+        echo '<option value="'.$i.'"'.(($matrixPointSize==$i)?' selected':'').'>'.$i.'</option>';
+        
+    echo '</select>&nbsp;
+        <input type="submit" value="GENERATE"></form><hr/>';
+        
+    // benchmark
+    QRtools::timeBenchmark();    
+
+    
